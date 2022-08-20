@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package br.edu.fatecfranca.projeto01;
+package br.edu.fatecfranca.projeto01.exe0;
 
 /**
  *
@@ -31,10 +31,29 @@ public class Produto {
         this.qtde = this.qtde + x;
     }
     
+    // Método vender, subtrai do estoque(qtde)
     public void vender(int x){
         if(this.qtde >= x){
             this.qtde = this.qtde - x;
         }
         else System.out.println("Sem estoque");
+    }
+    
+    // Método mostrar, mostra a caixa de mensagem abaixo
+    public void mostrar(){
+        System.out.println("Nome: " + this.nome + "\nQtde: " + this.qtde + "\nPreço: " + this.preco + "\n");
+    }
+    
+    // Método subir, aumenta o preco do produto
+    public void subir(double x){
+        this.preco += x;
+    }
+    
+    // Método abaixar, abaixa o preco do produto
+    public void abaixar(double x){
+        if(x <= this.preco){
+            this.preco -= x;
+        }
+        else System.out.println("O preço do produto não pode ser negativo.");
     }
 }
