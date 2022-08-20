@@ -44,12 +44,12 @@ public class Carro {
     }
     
     // faça um método para acelerar o carro x de unidades
-    public void acelerar(int x){
+    public void acelerar(double x){
         this.velAtual += x;
     }
     
     // faça um método para frear o carro x de unidades
-    public void frear(int x){
+    public void frear(double x){
         if(this.velAtual < x){
             System.out.println("O carro não consegue frear mais.");
         }
